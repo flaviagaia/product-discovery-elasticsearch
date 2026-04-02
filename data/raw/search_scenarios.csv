@@ -1,0 +1,5 @@
+scenario_id,query_text,search_mode,category_filter,price_range,expected_sku
+S-1001,sony head,autocomplete,,,SKU-1001
+S-1002,wireless keyboard,filtered_search,computer_accessories,,SKU-1003
+S-1003,running gps watch,hybrid_search,wearables,,SKU-1006
+S-1004,cordless vacuum,filtered_search,home_appliances,350:450,SKU-1007

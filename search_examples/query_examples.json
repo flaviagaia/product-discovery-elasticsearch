@@ -1,0 +1,63 @@
+{
+  "autocomplete": {
+    "description": "Prefix-oriented discovery query.",
+    "example": {
+      "multi_match": {
+        "query": "sony head",
+        "fields": [
+          "title.autocomplete^3",
+          "title^2",
+          "brand^2"
+        ]
+      }
+    }
+  },
+  "filtered_search": {
+    "description": "Lexical query with category and price filters.",
+    "example": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "title": "wireless keyboard"
+            }
+          }
+        ],
+        "filter": [
+          {
+            "term": {
+              "category": "computer_accessories"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "hybrid_search": {
+    "description": "Lexical plus vector search using dense_vector and RRF-style fusion.",
+    "example": {
+      "retrievers": {
+        "rrf": {
+          "retrievers": [
+            {
+              "standard": {
+                "query": {
+                  "match": {
+                    "title": "running gps watch"
+                  }
+                }
+              }
+            },
+            {
+              "knn": {
+                "field": "embedding",
+                "k": 10,
+                "num_candidates": 25
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

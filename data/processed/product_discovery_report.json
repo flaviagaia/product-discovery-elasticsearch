@@ -1,0 +1,11 @@
+{
+  "dataset_source": "product_discovery_elasticsearch_sample",
+  "product_count": 8,
+  "scenario_count": 4,
+  "success_rate_at_1": 1.0,
+  "results_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/processed/product_discovery_results.csv",
+  "report_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/processed/product_discovery_report.json",
+  "settings_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_settings.json",
+  "mappings_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_mappings.json",
+  "query_examples_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/search_examples/query_examples.json"
+}

@@ -1,0 +1,9 @@
+sku,title,description,brand,category,price,rating,popularity_score,inventory_score,is_promoted
+SKU-1001,Sony Noise Cancelling Headphones,Wireless over-ear headphones with adaptive noise cancelling and premium sound.,sony,audio,349.0,4.8,0.91,0.82,1
+SKU-1002,Bose Quiet Wireless Headphones,Bluetooth headphones with immersive sound and all-day comfort.,bose,audio,329.0,4.7,0.89,0.76,1
+SKU-1003,Logitech MX Keys Keyboard,Wireless keyboard for office productivity and multi-device pairing.,logitech,computer_accessories,119.0,4.9,0.88,0.73,1
+SKU-1004,Razer Gaming Mechanical Keyboard,RGB mechanical keyboard for gaming setups with tactile switches.,razer,computer_accessories,169.0,4.6,0.84,0.81,1
+SKU-1005,Apple Watch SE,"Smartwatch with fitness tracking, GPS and health monitoring.",apple,wearables,249.0,4.8,0.95,0.64,1
+SKU-1006,Garmin Forerunner 255,"Running watch with GPS, advanced training metrics and recovery insights.",garmin,wearables,299.0,4.7,0.86,0.77,1
+SKU-1007,Dyson Cordless Vacuum,Cordless vacuum cleaner with strong suction and lightweight design.,dyson,home_appliances,399.0,4.7,0.83,0.58,0
+SKU-1008,Shark Cordless Vacuum,Vacuum cleaner with auto-empty docking system and floor detection.,shark,home_appliances,379.0,4.5,0.81,0.72,1
