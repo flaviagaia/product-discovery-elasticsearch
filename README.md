@@ -13,20 +13,6 @@
 
 O ponto central do projeto é mostrar que descoberta de produtos não depende só de “buscar texto”, mas de **desenhar o índice corretamente** para cada tipo de interação do usuário.
 
-### Storytelling técnico
-
-Em um catálogo real, o usuário não procura produtos sempre da mesma forma. Em alguns momentos, ele só começa a digitar o nome do item. Em outros, já sabe exatamente o que quer e precisa filtrar categoria ou faixa de preço. Em buscas mais ambíguas, o texto da consulta não coincide exatamente com o texto do catálogo, e aí a camada vetorial passa a ser útil.
-
-Por isso, uma camada séria de product discovery normalmente precisa combinar:
-
-- um **campo textual** para matching lexical;
-- um **subcampo de autocomplete** para prefixos;
-- **campos keyword** para filtros exatos;
-- **campos numéricos** para preço e sinais operacionais;
-- um **dense_vector** para semântica;
-- uma lógica de combinação de sinais para ordenar melhor os resultados.
-
-Este projeto implementa esse desenho em um benchmark pequeno, reproduzível e auditável.
 
 ### O que o projeto faz
 
@@ -41,19 +27,19 @@ O pipeline:
 
 ### Arquitetura do repositório
 
-- [src/sample_data.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/src/sample_data.py)  
+- [src/sample_data.py](src/sample_data.py)  
   Gera o catálogo, os cenários, os settings, os mappings e os exemplos de consulta.
-- [src/modeling.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/src/modeling.py)  
+- [src/modeling.py](src/modeling.py)  
   Implementa a lógica local de autocomplete, filtros e busca híbrida.
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/main.py)  
+- [main.py](main.py)  
   Executa o benchmark ponta a ponta.
-- [tests/test_project.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/tests/test_project.py)  
+- [tests/test_project.py](tests/test_project.py)  
   Garante o contrato mínimo do projeto.
-- [products_index_settings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_settings.json)  
+- [products_index_settings.json](index_configs/products_index_settings.json)  
   Define tokenizer, analyzers e normalizer.
-- [products_index_mappings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_mappings.json)  
+- [products_index_mappings.json](index_configs/products_index_mappings.json)  
   Define tipos, subcampos e `dense_vector`.
-- [query_examples.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/search_examples/query_examples.json)  
+- [query_examples.json](search_examples/query_examples.json)  
   Traz exemplos de consulta alinhados ao índice.
 
 ### Pipeline conceitual
@@ -73,7 +59,7 @@ flowchart LR
 
 Arquivo:
 
-- [products_index_settings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_settings.json)
+- [products_index_settings.json](index_configs/products_index_settings.json)
 
 ### O que ele define
 
@@ -123,7 +109,7 @@ Função:
 
 Arquivo:
 
-- [products_index_mappings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_mappings.json)
+- [products_index_mappings.json](index_configs/products_index_mappings.json)
 
 ### Campos principais e seu papel
 
@@ -252,8 +238,8 @@ Essa separação é exatamente o que faz um índice de discovery escalar melhor 
 
 Arquivos:
 
-- [product_catalog.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/raw/product_catalog.csv)
-- [search_scenarios.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/raw/search_scenarios.csv)
+- [product_catalog.csv](data/raw/product_catalog.csv)
+- [search_scenarios.csv](data/raw/search_scenarios.csv)
 
 ### Estrutura do catálogo
 
@@ -385,7 +371,7 @@ Exemplo:
 
 Arquivo:
 
-- [query_examples.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/search_examples/query_examples.json)
+- [query_examples.json](search_examples/query_examples.json)
 
 ### O que ele mostra
 
@@ -449,11 +435,11 @@ Como a base ainda é pequena e sintética, isso não representa um cenário de p
 
 ## Artefatos gerados
 
-- [product_discovery_results.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/processed/product_discovery_results.csv)
-- [product_discovery_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/data/processed/product_discovery_report.json)
-- [products_index_settings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_settings.json)
-- [products_index_mappings.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/index_configs/products_index_mappings.json)
-- [query_examples.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/product-discovery-elasticsearch/search_examples/query_examples.json)
+- [product_discovery_results.csv](data/processed/product_discovery_results.csv)
+- [product_discovery_report.json](data/processed/product_discovery_report.json)
+- [products_index_settings.json](index_configs/products_index_settings.json)
+- [products_index_mappings.json](index_configs/products_index_mappings.json)
+- [query_examples.json](search_examples/query_examples.json)
 
 ## Limitações atuais
 
